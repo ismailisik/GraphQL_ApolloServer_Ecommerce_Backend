@@ -1,0 +1,27 @@
+type Supplier{
+    _id:ID!
+    companyName:String
+    address:String
+    phone:String
+    city:String
+    contry:String
+}
+
+input SupplierInput{
+    companyName:String!
+    address:String!
+    phone:String!
+    city:String!
+    contry:String!
+}
+
+type Query{
+    suppliers:[Supplier!]
+    supplier(id:ID):Supplier!
+}
+
+type Mutation{
+    saveSupplier(input:SupplierInput!):Supplier!
+    updateSupplier(id:ID!,input:SupplierInput!):Supplier!
+    deleteSupplier(id:ID!):Supplier!
+}

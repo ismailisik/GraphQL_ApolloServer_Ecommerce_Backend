@@ -1,0 +1,17 @@
+# import Query from './types/category.graphql'
+# import Mutation from './types/category.graphql'
+
+# import Query from './types/supplier.graphql'
+# import Mutation from './types/supplier.graphql'
+
+# import Query from './types/product.graphql'
+# import Mutation from './types/product.graphql'
+
+# import Query from './types/users.graphql'
+# import Mutation from './types/users.graphql'
+
+# import Query from './types/operationClaims.graphql'
+# import Mutation from './types/operationClaims.graphql'
+
+# import Query from './types/userOperationClaims.graphql'
+# import Mutation from './types/userOperationClaims.graphql'

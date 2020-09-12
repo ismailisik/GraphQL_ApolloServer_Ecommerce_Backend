@@ -1,0 +1,30 @@
+type Users{
+    _id:ID
+    firstName:String
+    lastName:String
+    email:String
+    status:Int
+    birthDate:String
+    password:String
+    claims: [Int]
+}
+
+input UserInput{
+    firstName:String!
+    lastName:String!
+    email:String!
+    status:Int!
+    birthDate:String!
+    password:String!
+    claims:[Int!]
+}
+
+type Query{
+    User(id:ID):Users!
+    Users:[Users!]
+}
+
+type Mutation {
+    saveUser(input:UserInput!):Users!
+    inactiveUser(id:ID!):Users!
+}

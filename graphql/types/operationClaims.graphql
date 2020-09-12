@@ -1,0 +1,16 @@
+type OperationClaim{
+    _id:ID
+    name:String
+}
+
+input OperationClaimInput{
+    name:String!
+}
+
+type Query {
+    operationClaim(id:ID):OperationClaim!
+}
+
+type Mutation{
+    saveOperationClaim(input:OperationClaimInput!):OperationClaim!
+}

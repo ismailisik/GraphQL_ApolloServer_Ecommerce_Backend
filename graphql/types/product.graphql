@@ -1,0 +1,29 @@
+type Product{
+    _id:ID
+    productName:String
+    unitPrice:Int
+    category:Category
+    supplier:Supplier
+    quantityPerUnit:String
+    description:String
+}
+
+input ProductInput{
+    productName:String!
+    unitPrice:Int!
+    category:ID
+    supplier:ID
+    quantityPerUnit:String!
+    description:String
+}
+
+type Query {
+    products:[Product!]
+    product(id:ID):Product!
+}
+
+type Mutation{
+    saveProduct(input:ProductInput!):Product!
+    updateProduct(id:ID!,input:ProductInput!):Product!
+    deleteProduct(id:ID!):Product!
+}

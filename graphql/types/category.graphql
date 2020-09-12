@@ -1,0 +1,21 @@
+type Category{
+    _id:ID
+    name:String
+    description:String
+}
+
+input CategoryInput{
+    name:String!
+    description:String
+}
+
+type Query {
+    category(id:ID!):Category!
+    categories:[Category!]
+}
+
+type Mutation{
+    saveCategory(input:CategoryInput!):Category!
+    updateCategory(id:ID,input:CategoryInput!):Category!
+    deleteCategory(id:ID):Category!
+}

@@ -1,0 +1,18 @@
+type UserOperationClaim{
+    _id:ID
+    userId:ID
+    operationClaimId:ID
+}
+
+input UserOperationClaimInput{
+    userId:ID!
+    operationClaimId:ID!
+}
+
+type Query{
+    userOperationClaims(userId:ID!) : [UserOperationClaim!]
+}
+
+type Mutation{
+    saveUserOperationClaim(input:UserOperationClaimInput!):UserOperationClaim!
+}
