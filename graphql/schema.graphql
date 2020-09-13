@@ -15,3 +15,5 @@
 
 # import Query from './types/userOperationClaims.graphql'
 # import Mutation from './types/userOperationClaims.graphql'
+
+# import Mutation from './types/sequence.graphql'

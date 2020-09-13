@@ -1,5 +1,5 @@
 type Product{
-    _id:ID
+    _id:Int
     productName:String
     unitPrice:Int
     category:Category
@@ -11,8 +11,8 @@ type Product{
 input ProductInput{
     productName:String!
     unitPrice:Int!
-    category:ID
-    supplier:ID
+    category:Int
+    supplier:Int
     quantityPerUnit:String!
     description:String
 }

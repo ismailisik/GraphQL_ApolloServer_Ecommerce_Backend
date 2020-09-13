@@ -1,12 +1,15 @@
+const getNextSequenceValue = require('../../../helpers/autoIncrement/autoIncrement');
+
 module.exports = {
-    saveCategory : async (parent,args,ctx) =>{
-        const isCategoryName=await ctx.Category.findOne({categoryName:args.data.categoryName});
+    saveCategory : async (parent, {input},ctx) =>{
+        const isCategoryName = await ctx.Category.findOne({name:input.name})
+
         if (isCategoryName){
             throw new Error('This Category Already Exist');
         }
-
         const newCategory = {
-           ...args.input
+            _id: (await getNextSequenceValue('categoryId',ctx.Sequence)),
+           ...input
         };
 
         const response = await ctx.Category(newCategory).save();

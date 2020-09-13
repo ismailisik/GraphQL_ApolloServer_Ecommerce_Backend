@@ -2,9 +2,14 @@ const mongoose = require('mongoose');
 const schema = mongoose.Schema;
 
 const supplierSchema = new schema({
+	_id:{
+		type:Number,
+		required: true
+	},
 	companyName:{
 		type:String,
 		required:true,
+		unique:true,
 	},
 	address:{
 		type:String,

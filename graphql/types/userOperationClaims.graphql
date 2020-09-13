@@ -1,5 +1,5 @@
 type UserOperationClaim{
-    _id:ID
+    _id:Int
     userId:ID
     operationClaimId:ID
 }

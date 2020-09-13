@@ -3,11 +3,11 @@ const schema = mongoose.Schema;
 
 const userOperationClaimsSchema = schema({
    userId:{
-       type:String,
+       type:Number,
        required:true
    },
     operationClaimId:{
-        type:String,
+        type:Number,
         required:true
     }
 });

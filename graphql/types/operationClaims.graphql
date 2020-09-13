@@ -1,5 +1,5 @@
 type OperationClaim{
-    _id:ID
+    _id:Int
     name:String
 }
 

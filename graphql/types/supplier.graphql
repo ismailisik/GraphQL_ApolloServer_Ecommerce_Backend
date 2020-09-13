@@ -1,10 +1,10 @@
 type Supplier{
-    _id:ID!
+    _id:Int
     companyName:String
     address:String
     phone:String
     city:String
-    contry:String
+    country:String
 }
 
 input SupplierInput{
@@ -12,7 +12,7 @@ input SupplierInput{
     address:String!
     phone:String!
     city:String!
-    contry:String!
+    country:String!
 }
 
 type Query{

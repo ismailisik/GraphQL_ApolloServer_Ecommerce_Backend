@@ -1,0 +1,12 @@
+type Sequence {
+    _id:String
+    sequence_value:Int
+}
+
+input SequenceInput {
+    _id:String!
+}
+
+type Mutation {
+    addSequence(input:SequenceInput!):Sequence!
+}
