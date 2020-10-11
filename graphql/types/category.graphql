@@ -1,10 +1,10 @@
-type Category{
+type Category {
     _id:Int
     name:String
     description:String
 }
 
-input CategoryInput{
+input CategoryInput {
     name:String!
     description:String
 }
@@ -14,7 +14,7 @@ type Query {
     categories:[Category!]
 }
 
-type Mutation{
+type Mutation {
     saveCategory(input:CategoryInput!):Category!
     updateCategory(id:ID,input:CategoryInput!):Category!
     deleteCategory(id:ID):Category!

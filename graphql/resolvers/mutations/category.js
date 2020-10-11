@@ -16,11 +16,13 @@ module.exports = {
 
         return response;
     },
-    updateCategory : async (parent, {id,data},ctx) => {
-        const response = ctx.Category.findOneAndUpdate({_id:id},{...data},{new:true});
+    updateCategory : async (parent, {id,input},ctx) => {
+        const response = ctx.Category.findOneAndUpdate({_id:id},{...input},{new:true});
         return response;
     },
     deleteCategory: async (parent, {id},ctx) => {
-        const result = ctx.Category.findOneAndDelete({_id:id});
+        const response = await ctx.Category.findOneAndDelete({_id:id});
+
+        return response;
     }
 }

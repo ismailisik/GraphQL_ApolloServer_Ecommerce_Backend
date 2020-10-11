@@ -1,7 +1,9 @@
-const Query = require('../resolvers/query/');
-const Mutation = require('../resolvers/mutation/index')
+const Query = require('../resolvers/queries/');
+const Mutation = require('../resolvers/mutations/index');
+const Product = require('../resolvers/queries/complexQueries/product');
 
 module.exports = {
     Query,
-    Mutation
+    Mutation,
+    Product,
 }

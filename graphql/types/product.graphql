@@ -1,4 +1,4 @@
-type Product{
+type Product {
     _id:Int
     productName:String
     unitPrice:Int
@@ -8,7 +8,7 @@ type Product{
     description:String
 }
 
-input ProductInput{
+input ProductInput {
     productName:String!
     unitPrice:Int!
     category:Int
@@ -22,7 +22,7 @@ type Query {
     product(id:ID):Product!
 }
 
-type Mutation{
+type Mutation {
     saveProduct(input:ProductInput!):Product!
     updateProduct(id:ID!,input:ProductInput!):Product!
     deleteProduct(id:ID!):Product!
